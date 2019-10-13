@@ -2,7 +2,7 @@
 ### Description
 * A Convolutional Neural Network model built into a script to work on real life digit images.
 * Model has been trained with data augmentation using keras' ImageDataGenerator to make it more robust on real life images.
-* The script uses various image processing techniques such grayscale, threshold, dilate and resize to get overall better performance
+* The script uses various image processing techniques such as grayscale, threshold, dilate and resize to get overall better performance.
 * The script also has a GUI based thresholding option to adapt to different lighting conditions.
 
 

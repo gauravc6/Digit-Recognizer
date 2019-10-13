@@ -11,7 +11,7 @@
 ### Get it running
 * First create a conda enviroment using `conda create --name env python=3.7`
 * Activate the environment using `source activate env` for mac/linux users or `activate env` for windows users.
-* Install requirements using `conda install tensorflow-gpu keras opencv`.
+* Install requirements using `conda install tensorflow keras opencv` for CPU only or `conda install tensorflow-gpu keras opencv` for GPU acceleration support.
 * Next to run the script simply do `python recognizeDigits.py`.
 
 ### Other Info

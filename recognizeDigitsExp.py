@@ -54,14 +54,21 @@ def roi_fn():
 
 
 def cv_fn():
-
+    
+    model = None
     # loading pre-trained model
-    model = load_model('MNIST_Digits.h5')
+    if os.path.exists('MNIST_Digits.h5'):
+        model = load_model('MNIST_Digits.h5')
 
     if os.name == 'nt':
         os.system('cls')
     else:
         os.system('clear')
+    if model:
+        print('Model Loaded!')
+    else:
+        return print('Model not found! Get the model file(.h5) from here - https://github.com/gauravc6/Digit-Recognizer.git')
+
     print('Initializing Capture...')
     print('Hit Esc. to stop capture!')
     # grab the first camera input device

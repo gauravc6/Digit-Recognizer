@@ -93,8 +93,7 @@ def cv_fn():
         _,thresh = cv2.threshold(roi,thresh_value,255,cv2.THRESH_BINARY_INV)
         dilate = cv2.dilate(thresh,kernel=kernel)
         roi = cv2.resize(roi,(28,28),interpolation=cv2.INTER_CUBIC)
-        roi = np.expand_dims(roi,axis=2)
-        roi = np.expand_dims(roi,axis=0)
+        roi = roi.reshape(1,28,28,1)
 
         # display model predictions on frame
         cv2.putText(frame_copy,f"I see a ... {model.predict_classes(roi)[0]}?",(30,30),cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,255),2)
